@@ -1,7 +1,17 @@
 import React from "react";
+// React router dom
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// Pages
+import WelcomePage from "./pages/Welcome";
 
 const App: React.FC = () => {
-  return <h1>Hello React</h1>;
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={WelcomePage} />
+      </Switch>
+    </Router>
+  );
 };
 
 export default App;
